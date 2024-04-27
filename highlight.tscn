@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjlpndksr5pr8"]
+
+[ext_resource type="Shader" path="res://colorSwap.gdshader" id="1_s30t8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5l1ca"]
+shader = ExtResource("1_s30t8")
+
+[node name="HIGHLIGHT" type="ColorRect"]
+z_index = -1
+z_as_relative = false
+material = SubResource("ShaderMaterial_5l1ca")
+offset_left = 180.0
+offset_top = 219.0
+offset_right = 198.0
+offset_bottom = 249.001

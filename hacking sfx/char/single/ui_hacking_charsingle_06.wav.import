@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://pgm2ogaceypo"
+path="res://.godot/imported/ui_hacking_charsingle_06.wav-74c59a5396402a8007889ce96721dd8d.sample"
+
+[deps]
+
+source_file="res://hacking sfx/char/single/ui_hacking_charsingle_06.wav"
+dest_files=["res://.godot/imported/ui_hacking_charsingle_06.wav-74c59a5396402a8007889ce96721dd8d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=1
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

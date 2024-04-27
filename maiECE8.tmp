@@ -1,0 +1,163 @@
+[gd_scene load_steps=6 format=3 uid="uid://dab5gk1e0n83m"]
+
+[ext_resource type="Shader" path="res://crt.gdshader" id="1_6t3xb"]
+[ext_resource type="Script" path="res://game.gd" id="2_7qei3"]
+[ext_resource type="FontFile" uid="uid://mf05axfouu7d" path="res://FSEX300.ttf" id="2_whnsl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_awxny"]
+shader = ExtResource("1_6t3xb")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.4
+shader_parameter/scanlines_width = 0.25
+shader_parameter/grille_opacity = 0.0
+shader_parameter/resolution = Vector2(800, 1066.67)
+shader_parameter/pixelate = true
+shader_parameter/roll = true
+shader_parameter/roll_speed = 1.0
+shader_parameter/roll_size = 4.096
+shader_parameter/roll_variation = 5.0
+shader_parameter/distort_intensity = 0.05
+shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.06
+shader_parameter/aberration = 0.00800005
+shader_parameter/brightness = 1.4
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.382
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
+
+[sub_resource type="LabelSettings" id="LabelSettings_1fxii"]
+line_spacing = -5.5
+font = ExtResource("2_whnsl")
+font_size = 36
+font_color = Color(0.475977, 1, 0.37841, 1)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_awxny")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/ColorRect"]
+z_index = 1
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.054902, 0.278431, 0.0745098, 0.713726)
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/ColorRect"]
+z_index = -1
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="display" type="Node2D" parent="CanvasLayer"]
+script = ExtResource("2_7qei3")
+
+[node name="PROTOCOL" type="Label" parent="CanvasLayer/display"]
+offset_left = 53.0
+offset_top = 36.0
+offset_right = 737.0
+offset_bottom = 73.0
+text = "ROBCO INDUSTRIES(TM) TERMLINK PROTOCOL"
+label_settings = SubResource("LabelSettings_1fxii")
+
+[node name="ENTERPW" type="Label" parent="CanvasLayer/display"]
+offset_left = 54.0
+offset_top = 69.0
+offset_right = 738.0
+offset_bottom = 106.0
+text = "ENTER PASSWORD NOW"
+label_settings = SubResource("LabelSettings_1fxii")
+
+[node name="ATTEMPTS" type="Label" parent="CanvasLayer/display"]
+offset_left = 57.0
+offset_top = 125.0
+offset_right = 741.0
+offset_bottom = 174.0
+text = "4 ATTEMPT(S) LEFT: ◼ ◼ ◼ ◼"
+label_settings = SubResource("LabelSettings_1fxii")
+
+[node name="L_CHAR" type="Label" parent="CanvasLayer/display"]
+offset_left = 54.0
+offset_top = 207.0
+offset_right = 414.0
+offset_bottom = 804.0
+text = "0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA"
+label_settings = SubResource("LabelSettings_1fxii")
+
+[node name="R_CHAR" type="Label" parent="CanvasLayer/display"]
+offset_left = 446.0
+offset_top = 207.0
+offset_right = 824.0
+offset_bottom = 804.0
+text = "0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA
+0xXXXX AAAAAAAAAAAAA"
+label_settings = SubResource("LabelSettings_1fxii")
+
+[node name="INPUT" type="Label" parent="CanvasLayer/display"]
+offset_left = 835.0
+offset_top = 220.0
+offset_right = 1138.0
+offset_bottom = 757.0
+text = ">DESERTERS
+>Entry denied
+>4/9 correct.
+ 
+>SALVATION"
+label_settings = SubResource("LabelSettings_1fxii")
+vertical_alignment = 2
+clip_text = true
+
+[node name="Timer" type="Timer" parent="CanvasLayer/display"]
+wait_time = 0.001

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cyih0b0m8mxx6"
+path="res://.godot/imported/ui_hacking_fanhum_lp.wav-c3f6d92e50656ac9302df095fb6d5275.sample"
+
+[deps]
+
+source_file="res://hacking sfx/ui_hacking_fanhum_lp.wav"
+dest_files=["res://.godot/imported/ui_hacking_fanhum_lp.wav-c3f6d92e50656ac9302df095fb6d5275.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

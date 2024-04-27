@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b3ewhyro67285"
+path="res://.godot/imported/ui_hacking_charsingle_07.wav-b1cae7fb7ac0c7cb6d4bdde8fd1675dd.sample"
+
+[deps]
+
+source_file="res://hacking sfx/char/single/ui_hacking_charsingle_07.wav"
+dest_files=["res://.godot/imported/ui_hacking_charsingle_07.wav-b1cae7fb7ac0c7cb6d4bdde8fd1675dd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=1
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
